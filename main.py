@@ -46,7 +46,7 @@ def my_try(client_socket):
     f.close()
 
     # 返回数据给浏览器
-    client_socket.send(response_headers.encode("utf-8"))   #转码utf-8并send数据到浏览器
+    #client_socket.send(response_headers.encode("utf-8"))   #转码utf-8并send数据到浏览器
     client_socket.send(response_body)   #转码utf-8并send数据到浏览器
     client_socket.close()
 
