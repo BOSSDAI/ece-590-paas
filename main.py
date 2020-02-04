@@ -17,6 +17,7 @@ def name(value):
 
 @app.route('/try')
 def my_try(client_socket):
+
     """为一个客户端服务"""
     # 接收对方发送的数据
     recv_data = client_socket.recv(1024).decode("utf-8") #  1024表示本次接收的最大字节数
@@ -28,8 +29,8 @@ def my_try(client_socket):
      
     # 返回浏览器数据
     # 设置返回的头信息 header
-    response_headers = "HTTP/1.1 200 OK\r\n" # 200 表示找到这个资源
-    response_headers += "\r\n" # 空一行与body隔开
+    #response_headers = "HTTP/1.1 200 OK\r\n" # 200 表示找到这个资源
+    #response_headers += "\r\n" # 空一行与body隔开
     # 设置内容body
 #    response_body = "<h1>fat boss<h1>\r\n" 
 #    response_body += "<h2>come on<h2>\r\n" 
