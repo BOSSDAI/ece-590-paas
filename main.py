@@ -16,16 +16,16 @@ def name(value):
 
 
 @app.route('/try')
-def my_try(client_socket):
+def my_try():
 
     """为一个客户端服务"""
     # 接收对方发送的数据
-    recv_data = client_socket.recv(1024).decode("utf-8") #  1024表示本次接收的最大字节数
+    #recv_data = client_socket.recv(1024).decode("utf-8") #  1024表示本次接收的最大字节数
     # 打印从客户端发送过来的数据内容
     #print("client_recv:",recv_data)
-    request_header_lines = recv_data.splitlines()
-    for line in request_header_lines:
-        print(line)
+    #request_header_lines = recv_data.splitlines()
+    #for line in request_header_lines:
+    #    print(line)
      
     # 返回浏览器数据
     # 设置返回的头信息 header
