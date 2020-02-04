@@ -43,12 +43,14 @@ def my_try():
     file_name = "demo.html" # 设置读取的文件路径
     f = open(file_name,"rb") # 以二进制读取文件内容
     response_body = f.read()
+
     f.close()
+    return f
 
     # 返回数据给浏览器
     #client_socket.send(response_headers.encode("utf-8"))   #转码utf-8并send数据到浏览器
-    client_socket.send(response_body)   #转码utf-8并send数据到浏览器
-    client_socket.close()
+    #client_socket.send(response_body)   #转码utf-8并send数据到浏览器
+    #client_socket.close()
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
