@@ -39,7 +39,7 @@ def my_try(client_socket):
 #    response = response_headers + response_body
 
     # 读取html文件内容
-    file_name = "./html/index.html" # 设置读取的文件路径
+    file_name = "demo.html" # 设置读取的文件路径
     f = open(file_name,"rb") # 以二进制读取文件内容
     response_body = f.read()
     f.close()
